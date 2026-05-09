@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Dot Net | Premium Data Plug Ghana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { transition: background-color 0.3s, color 0.3s; }
+        .dark-mode { background-color: #0f172a; color: #f8fafc; }
+        .dark-mode .bg-white { background-color: #1e293b; border-color: #334155; color: white; }
+        .mtn-yellow { background-color: #FFCC00; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans" id="body">
+
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50 py-3 px-6 flex justify-between items-center shadow-sm">
+        <div class="flex items-center gap-1">
+            <span class="text-2xl font-black tracking-tighter text-blue-700">DATA</span>
+            <span class="text-2xl font-black tracking-tighter text-yellow-500">.NET</span>
+        </div>
+        <button onclick="toggleDarkMode()" class="p-2 rounded-full bg-slate-100 hover:bg-slate-200">
+            <i class="fas fa-moon" id="dark-icon"></i>
+        </button>
+    </nav>
+
+    <header class="py-10 px-6 text-center">
+        <div class="inline-block animate-float mb-4">
+            <div class="bg-blue-600 text-white p-4 rounded-3xl shadow-xl">
+                <i class="fas fa-wifi text-3xl"></i>
+            </div>
+        </div>
+        <h2 class="text-3xl font-extrabold mb-2 leading-tight">Ghana's Fastest <br><span class="text-blue-600 underline">Data Refill</span></h2>
+        <p class="text-slate-500 text-sm max-w-xs mx-auto">Instant MTN delivery. No codes, no expiry, just data.</p>
+    </header>
+
+    <section class="px-6 space-y-4 max-w-md mx-auto">
+        <h3 class="font-bold text-xs uppercase tracking-widest text-slate-400">MTN Flash Rates</h3>
+        
+        <div class="bg-white p-5 rounded-2xl border border-slate-100 flex justify-between items-center shadow-sm">
+            <div>
+                <h4 class="text-2xl font-black uppercase">2GB</h4>
+                <p class="text-blue-600 font-bold">GH₵ 11.00</p>
+            </div>
+            <a href="https://wa.me/233534337934?text=Hi Data Dot Net, I want 2GB (11 GHS)" class="mtn-yellow px-6 py-3 rounded-xl font-bold text-sm shadow-md active:scale-90 transition">Order</a>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border-2 border-yellow-400 flex justify-between items-center shadow-md relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-yellow-400 px-3 py-1 rounded-bl-xl text-[10px] font-black">POPULAR</div>
+            <div>
+                <h4 class="text-2xl font-black uppercase">3GB</h4>
+                <p class="text-blue-600 font-bold">GH₵ 16.00</p>
+            </div>
+            <a href="https://wa.me/233534337934?text=Hi Data Dot Net, I want 3GB (16 GHS)" class="mtn-yellow px-6 py-3 rounded-xl font-bold text-sm shadow-md active:scale-90 transition">Order</a>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-100 flex justify-between items-center shadow-sm">
+            <div>
+                <h4 class="text-2xl font-black uppercase">4GB</h4>
+                <p class="text-blue-600 font-bold">GH₵ 21.00</p>
+            </div>
+            <a href="https://wa.me/233534337934?text=Hi Data Dot Net, I want 4GB (21 GHS)" class="mtn-yellow px-6 py-3 rounded-xl font-bold text-sm shadow-md active:scale-90 transition">Order</a>
+        </div>
+    </section>
+
+    <section class="mt-10 px-6 max-w-md mx-auto">
+        <div class="bg-blue-900 p-6 rounded-3xl text-white shadow-2xl">
+            <h4 class="font-bold mb-4 flex items-center gap-2">
+                <i class="fas fa-calculator text-yellow-400"></i> Data Calculator
+            </h4>
+            <p class="text-xs opacity-70 mb-4">Enter your budget to see what we offer:</p>
+            <input type="number" id="budget" placeholder="Enter Amount (GHS)" class="w-full p-3 rounded-xl bg-blue-800 border border-blue-700 text-white placeholder-blue-300 focus:outline-none focus:border-yellow-400 mb-4">
+            <div id="result" class="text-center font-bold text-xl text-yellow-400">---</div>
+            <a href="https://wa.me/233534337934" id="calc-order" class="block text-center mt-4 bg-white text-blue-900 py-2 rounded-lg font-bold text-sm hidden">Chat to Buy this Amount</a>
+        </div>
+    </section>
+
+    <section class="mt-10 px-6 max-w-md mx-auto pb-20">
+        <h3 class="font-bold text-xs uppercase tracking-widest text-slate-400 mb-4">Other Networks</h3>
+        <div class="grid grid-cols-2 gap-4">
+            <a href="https://wa.me/233534337934?text=Prices for Telecel?" class="bg-white p-4 rounded-2xl border border-slate-100 text-center shadow-sm">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Telecel_Group_Logo.png" class="h-6 mx-auto mb-2" alt="Telecel">
+                <span class="text-xs font-bold">Telecel Rates</span>
+            </a>
+            <a href="https://wa.me/233534337934?text=Prices for AT?" class="bg-white p-4 rounded-2xl border border-slate-100 text-center shadow-sm">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Airtel-Tigo-Logo.png" class="h-6 mx-auto mb-2" alt="AT">
+                <span class="text-xs font-bold">AT Rates</span>
+            </a>
+        </div>
+    </section>
+
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-xs z-50">
+        <a href="https://wa.me/233534337934" class="bg-[#25D366] text-white flex items-center justify-center gap-3 py-4 rounded-2xl shadow-2xl font-black uppercase tracking-wide">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            Message Admin
+        </a>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.getElementById('body');
+            const icon = document.getElementById('dark-icon');
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+
+        const budgetInput = document.getElementById('budget');
+        const resultDiv = document.getElementById('result');
+        const orderBtn = document.getElementById('calc-order');
+
+        budgetInput.addEventListener('input', (e) => {
+            const val = e.target.value;
+            if (val >= 21) {
+                resultDiv.innerText = "Get 4GB+ Bundle";
+                orderBtn.classList.remove('hidden');
+            } else if (val >= 16) {
+                resultDiv.innerText = "Get 3GB Bundle";
+                orderBtn.classList.remove('hidden');
+            } else if (val >= 11) {
+                resultDiv.innerText = "Get 2GB Bundle";
+                orderBtn.classList.remove('hidden');
+            } else {
+                resultDiv.innerText = "Min 11 GHS";
+                orderBtn.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
